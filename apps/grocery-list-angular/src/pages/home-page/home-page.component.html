@@ -1,0 +1,13 @@
+<div class="flex items-center justify-center w-screen h-screen font-medium">
+    <div class="flex flex-grow items-center justify-center h-full text-gray-600 bg-gray-100">
+        <div class="max-w-full p-8 bg-white rounded-lg shadow-lg w-96">
+            <list-item
+                    *ngFor="let item of items; trackBy: trackById"
+                    [item]="item"
+                    (onDelete)="onDelete(item.id)"
+            >
+            </list-item>
+            <add-new-item (onAdd)="onAdd($event)"></add-new-item>
+        </div>
+    </div>
+</div>

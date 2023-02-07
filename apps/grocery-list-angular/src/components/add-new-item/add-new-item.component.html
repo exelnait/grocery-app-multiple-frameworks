@@ -1,0 +1,9 @@
+<div class="flex items-center w-full h-8 px-2 mt-2 text-sm font-medium rounded">
+    <svg (click)="onAdd.emit(newItem.value);newItem.value = ''" class="w-5 h-5 text-gray-400 fill-current" fill="none" stroke="currentColor"
+         viewBox="0 0 24 24" width="10px" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 6v6m0 0v6m0-6h6m-6 0H6" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2"/>
+    </svg>
+    <input #newItem (keydown.enter)="onAdd.emit(newItem.value);newItem.value = ''" class="flex-grow h-8 ml-4 bg-transparent border-0 focus:outline-none font-medium"
+           placeholder="add a new item" type="text"/>
+</div>
